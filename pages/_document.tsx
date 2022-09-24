@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
           <meta name='emotion-insertion-point' content='' />
 
           <link rel='manifest' href='/manifest.json' />
-          <link rel='apple-touch-icon' href='/icon.png'></link>
+          <link rel='apple-touch-icon' href='/icon.png' type='image/png'></link>
           <meta name='theme-color' content='#fff' />
 
           {(this.props as any).emotionStyleTags}
