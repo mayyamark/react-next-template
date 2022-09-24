@@ -16,6 +16,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@next/next/recommended',
     'plugin:prettier/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
   ],
   rules: {
     'react/react-in-jsx-scope': 'off', // nextjs handles that
@@ -42,4 +44,17 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      node: true,
+      typescript: true,
+      alias: {
+        map: [['@app', './src']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };
